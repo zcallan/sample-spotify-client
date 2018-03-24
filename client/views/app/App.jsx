@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Home } from '../pages/index';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import { routes } from 'config';
 
 
 const App = () => (
   <Router>
-    <Route path="/" component={Home} />
+    {renderRoutes( routes )}
   </Router>
 );
 
