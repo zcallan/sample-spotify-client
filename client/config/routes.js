@@ -7,4 +7,8 @@ export default [
     exact: true,
     component: Pages.Home,
   },
+  {
+    path: '*',
+    component: Pages.NotFound,
+  },
 ];

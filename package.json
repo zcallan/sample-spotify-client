@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode=development",
+    "build": "webpack --mode=production --env=prod",
     "test": "jest"
   },
   "author": "Callan Delbridge",
@@ -26,6 +27,7 @@
     "@babel/preset-react": "^7.0.0-beta.42",
     "babel-loader": "^8.0.0-beta.2",
     "babel-plugin-react-css-modules": "^3.3.3",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.1.0",
     "node-sass": "^4.8.3",
