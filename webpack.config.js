@@ -6,9 +6,7 @@ const client = join( __dirname, './client' );
 
 module.exports = {
   context: client,
-  entry: {
-    app: './Root.jsx',
-  },
+  entry: client,
   output: {
     path: dist,
     filename: '[name].[hash].js',
@@ -37,6 +35,7 @@ module.exports = {
             },
           },
           'sass-loader',
+          'postcss-loader'
         ],
       }
     ],
