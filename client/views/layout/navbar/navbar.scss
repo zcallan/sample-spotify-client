@@ -1,0 +1,16 @@
+.navbar {
+  border-bottom: 1px solid #DDD;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+
+  h2 {
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
