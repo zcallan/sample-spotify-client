@@ -13,6 +13,10 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
+    modules: [
+      client,
+      'node_modules',
+    ],
     extensions: ['.js', '.jsx'],
   },
   module: {
