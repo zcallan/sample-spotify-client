@@ -70,6 +70,7 @@ module.exports = env => {
     devServer: {
       contentBase: dist,
       port: process.env.PORT || 3000,
+      historyApiFallback: true,
     },
     devtool: !isProd && 'inline-source-map',
     plugins,
