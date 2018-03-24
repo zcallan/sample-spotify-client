@@ -1,7 +1,12 @@
 .navbar-item {
   color: blue;
 
-  p {
-    margin: 0;
+  > a,
+  > span {
+    text-decoration: none;
+
+    > p {
+      margin: 0;
+    }
   }
 }

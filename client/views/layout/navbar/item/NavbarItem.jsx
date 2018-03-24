@@ -12,7 +12,7 @@ const NavbarItem = ({
   opensNewTab,
   text,
 }) => {
-  const tag = href ? ( externalLink ? 'a' : Link ) : 'div';
+  const tag = href ? ( externalLink ? 'a' : Link ) : 'span';
   const classes = cx( 'navbar-item', className );
   const element = createElement( tag, {
     ...href && {
