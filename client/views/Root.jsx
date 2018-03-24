@@ -7,5 +7,3 @@ ReactDOM.render(
   <App />,
   document.getElementById( 'root' )
 );
-
-console.log( process.env.NODE_ENV, process.env.DEBUG )
