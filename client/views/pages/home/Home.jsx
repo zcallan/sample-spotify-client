@@ -4,7 +4,7 @@ import Layout from 'views/layout';
 
 
 const Home = () => (
-  <Layout>
+  <Layout title="Home">
     <h1 styleName="heading">Sample Spotify Client</h1>
   </Layout>
 );

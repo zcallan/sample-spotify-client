@@ -1,4 +1,5 @@
 const { join } = require( 'path' );
+const webpack = require( 'webpack' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
 
@@ -24,6 +25,7 @@ module.exports = env => {
   if ( isProd ) {
     plugins.concat(
       new CleanWebpackPlugin( ['dist'] ),
+      new webpack.EnvironmentPlugin( ['NODE_ENV', 'DEBUG'] ),
     );
   }
 
