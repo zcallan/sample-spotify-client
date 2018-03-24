@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Home } from './pages';
 
 
 ReactDOM.render(
-  <h1>Sample Spotify Client</h1>,
+  <Home />,
   document.getElementById( 'root' )
 );

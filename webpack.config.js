@@ -12,6 +12,9 @@ module.exports = {
     filename: '[name].[hash].js',
     publicPath: '/',
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
