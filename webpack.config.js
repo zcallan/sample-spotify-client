@@ -25,7 +25,7 @@ module.exports = {
     contentBase: dist,
     port: process.env.PORT || 3000,
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebPackPlugin({
       template: './client/index.html',
