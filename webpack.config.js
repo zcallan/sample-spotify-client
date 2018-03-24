@@ -2,6 +2,7 @@ const { join } = require( 'path' );
 const webpack = require( 'webpack' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
+const UglifyJSPlugin = require( 'uglifyjs-webpack-plugin' );
 
 const dist = join( __dirname, './dist' );
 const client = join( __dirname, './client' );
@@ -20,12 +21,15 @@ module.exports = env => {
         removeAttributeQuotes: true,
       },
     }),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: isProd ? 'production' : 'development',
+      DEBUG: false,
+    }),
   ];
 
   if ( isProd ) {
-    plugins.concat(
-      new CleanWebpackPlugin( ['dist'] ),
-      new webpack.EnvironmentPlugin( ['NODE_ENV', 'DEBUG'] ),
+    plugins.push(
+      new CleanWebpackPlugin( [dist] ),
     );
   }
 
@@ -76,5 +80,20 @@ module.exports = env => {
     },
     devtool: !isProd && 'inline-source-map',
     plugins,
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new UglifyJSPlugin({
+          uglifyOptions: {
+            output: {
+              comments: false
+            },
+            compress: {
+              dead_code: true
+            }
+          }
+        })
+      ]
+    }
   };
 };
