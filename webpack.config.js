@@ -81,19 +81,19 @@ module.exports = env => {
     devtool: !isProd && 'inline-source-map',
     plugins,
     optimization: {
-      minimize: true,
+      minimize: isProd,
       minimizer: [
         new UglifyJSPlugin({
           uglifyOptions: {
             output: {
-              comments: false
+              comments: false,
             },
             compress: {
-              dead_code: true
-            }
-          }
-        })
-      ]
-    }
+              dead_code: true,
+            },
+          },
+        }),
+      ],
+    },
   };
 };
