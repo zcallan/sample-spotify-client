@@ -1,12 +1,12 @@
 import './home.scss';
 import React from 'react';
 import Layout from 'views/layout';
-import { Button, Link } from 'views/components';
+import { Button, Link, Heading } from 'views/components';
 
 
 const Home = () => (
   <Layout title="Home">
-    <h1 styleName="heading">Sample Spotify Client</h1>
+    <Heading styleName="heading">Sample Spotify Client</Heading>
 
     <Link to="/test" disabled>
       <Button color="red" disabled>Test</Button>
