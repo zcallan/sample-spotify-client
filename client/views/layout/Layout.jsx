@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import Navbar from './navbar';
 import config from 'config';
 
-
 const Layout = ({ children, title, description }) => (
   <div>
     <Helmet>

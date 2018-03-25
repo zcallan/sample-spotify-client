@@ -8,6 +8,10 @@ export default [
     component: Pages.Home,
   },
   {
+    path: '/callback',
+    component: Pages.Callback,
+  },
+  {
     path: '*',
     component: Pages.NotFound,
   },

@@ -1,7 +1,9 @@
-import { USER_AUTH_SUCCESS } from 'constants';
+import { USER_AUTH_SUCCESS, USER_AUTH_FAIL } from 'constants';
 
 const initialState = {
   authenticated: false,
+  data: {},
+  error: null,
 };
 
 export default ( state = initialState, { type, payload }) => {
@@ -10,6 +12,13 @@ export default ( state = initialState, { type, payload }) => {
       return {
         ...state,
         authenticated: true,
+        data: payload,
+      };
+
+    case USER_AUTH_FAIL:
+      return {
+        ...state,
+        error: payload,
       };
 
     default:

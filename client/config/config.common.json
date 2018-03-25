@@ -1,5 +1,8 @@
 {
   "app": {
     "name": "Sample Spotify Client"
+  },
+  "spotify": {
+    "clientId": "917245cfb15246c4a005d26dbfa6dfa8"
   }
 }
