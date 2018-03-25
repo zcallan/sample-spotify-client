@@ -40,6 +40,6 @@ NavbarItem.propTypes = {
   externalLink: bool,
   opensNewTab: bool,
   text: string.isRequired,
-}
+};
 
 export default NavbarItem;

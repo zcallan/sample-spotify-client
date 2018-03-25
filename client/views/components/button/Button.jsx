@@ -50,6 +50,7 @@ Button.propTypes = {
   color: oneOf(
     ['red', 'blue', 'grey', 'white']
   ).isRequired,
+  disabled: bool,
 };
 
 export default Button;

@@ -1,6 +1,6 @@
 import './link.scss';
 import React from 'react';
-import { string, bool, any } from 'prop-types';
+import { string, bool, any, func } from 'prop-types';
 import cx from 'classnames';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
@@ -64,6 +64,7 @@ Link.propTypes = {
   externalLink: bool,
   opensInSameTab: bool,
   disabled: bool,
+  onClick: func,
 };
 
 export default Link;

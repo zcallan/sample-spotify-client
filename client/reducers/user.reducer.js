@@ -1,4 +1,4 @@
-import{ USER_AUTH_SUCCESS } from 'constants';
+import { USER_AUTH_SUCCESS } from 'constants';
 
 const initialState = {
   authenticated: false,
