@@ -73,6 +73,9 @@ module.exports = env => {
         },
       ],
     },
+    node: {
+      constants: false, // Fix bug where importing `constants` returns node constants
+    },
     devServer: {
       contentBase: dist,
       port: process.env.PORT || 3000,
