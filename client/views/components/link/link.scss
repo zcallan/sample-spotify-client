@@ -1,0 +1,10 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.link:focus,
+.link:hover {
+  text-decoration: underline;
+}
