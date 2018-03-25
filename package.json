@@ -7,8 +7,8 @@
     "start": "webpack-dev-server --mode=development",
     "build": "webpack -p --mode=production --env=prod",
     "test": "jest",
-    "lint": "eslint client/",
-    "lint:fix": "eslint --fix client/"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "author": "Callan Delbridge",
   "license": "MIT",

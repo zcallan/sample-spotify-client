@@ -68,9 +68,9 @@ module.exports = env => {
               },
             },
             'sass-loader',
-            'postcss-loader'
+            'postcss-loader',
           ],
-        }
+        },
       ],
     },
     devServer: {
