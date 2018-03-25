@@ -14,18 +14,26 @@ class Callback extends Component {
   }
 
   componentDidMount() {
+    const { hash } = this.props.location;
+
+    if ( hash )
+      this.scanForLocationHashFragments();
+  }
+
+  scanForLocationHashFragments() {
     const { location, history } = this.props;
+
     const fragments = splitHashFragments( location.hash );
 
     if ( fragments.error ) {
       this.props.userAuthFail( fragments );
 
-      history.go( '/' );
+      history.replace( '/error' );
     }
-    else {
+    else if ( fragments.access_token ) {
       this.props.userAuthSuccess( fragments );
 
-      history.go( '/error' );
+      history.replace( '/dashboard' );
     }
   }
 

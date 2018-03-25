@@ -33,6 +33,7 @@ const Button = ({
     >
       <Text
         color={disabled ? 'grey' : textColors[color]}
+        margin={0}
       >
         {children}
       </Text>

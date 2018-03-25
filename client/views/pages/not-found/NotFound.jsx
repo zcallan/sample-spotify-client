@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link } from 'views/components';
+import Layout from 'views/layout';
+import { Link, Heading } from 'views/components';
 
 
 const NotFound = () => (
-  <div>
-    <h1>Page not found</h1>
+  <Layout title="404">
+    <Heading>Page not found</Heading>
 
     <Link to="/">Home</Link>
-  </div>
+  </Layout>
 );
 
 export default NotFound;

@@ -12,6 +12,10 @@ export default [
     component: Pages.Callback,
   },
   {
+    path: '/dashboard',
+    component: Pages.Dashboard,
+  },
+  {
     path: '*',
     component: Pages.NotFound,
   },
